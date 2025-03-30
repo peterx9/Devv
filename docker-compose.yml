@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mynginx:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./html:/var/www/html
+    container_name: mynginx_container
